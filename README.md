@@ -103,10 +103,6 @@ Then, you can use your command in `src/ui/commands/index.ts`.
 window.parent.postMessage({ pluginMessage: { type: 'DrawRectangles', payload: { count } } }, '*');
 ```
 
-#### To-do
-
-- [ ] Make `window.parent.postMessage` type-safe
-
 ### `src/ui`
 
 This directory contains the UI of the plugin.
@@ -122,3 +118,9 @@ Check `src/ui/components/App.tsx` for example.
 ```bash
 yarn build
 ```
+
+## To-do
+
+- [ ] Add tests
+- [ ] Add more convenient way to use `window.parent.postMessage`
+- [ ] Make `window.parent.postMessage` type-safe
