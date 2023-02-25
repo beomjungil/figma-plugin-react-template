@@ -1,0 +1,13 @@
+{
+  "name": "Figma Plugin React Template",
+  "id": "0000000000000000000",
+  "api": "1.0.0",
+  "main": "dist/core.js",
+  "ui": "dist/index.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma",
+    "figjam"
+  ]
+}

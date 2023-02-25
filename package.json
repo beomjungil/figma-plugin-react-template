@@ -1,0 +1,51 @@
+{
+  "name": "figma-plugin-react-template",
+  "version": "1.0.0",
+  "description": "Template for Figma plugin with React and Typescript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:ui": "cross-env TARGET=ui NODE_ENV=\"production\" vite build",
+    "watch:ui": "cross-env TARGET=ui NODE_ENV=\"development\" vite build --watch",
+    "build:core": "cross-env TARGET=core NODE_ENV=\"production\" vite build",
+    "watch:core": "cross-env TARGET=core NODE_ENV=\"development\" vite build --watch",
+    "build": "concurrently \"yarn:build:*\"",
+    "watch": "concurrently \"yarn:watch:*\"",
+    "lint": "eslint --ext .ts,.tsx .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "author": "beomjungil <gil@beomjun.kr>",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "*",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.14.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.4",
+    "typescript": "*",
+    "vite": "^4.1.4",
+    "vite-plugin-singlefile": "^0.13.3"
+  },
+  "dependencies": {
+    "height-app-api": "^1.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0"
+  }
+}
