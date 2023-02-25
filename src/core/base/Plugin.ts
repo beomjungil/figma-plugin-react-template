@@ -15,8 +15,8 @@ export class FigmaPlugin {
     this.commands = commands;
   }
 
-  start() {
-    this.figma.showUI(__html__);
+  start(options: ShowUIOptions = {}): void {
+    this.figma.showUI(__html__, options);
     this.figma.ui.onmessage = (message) => {
       this.handleMessage(message as unknown as FigmaUIMessage);
     };

@@ -15,6 +15,10 @@ const resolve = {
   },
 };
 
+const define = {
+  'process.env.NODE_ENV': process.env.NODE_ENV ? `"${process.env.NODE_ENV}"` : '"production"',
+};
+
 const uiConfig: UserConfigExport = {
   build: {
     emptyOutDir: false,
@@ -30,11 +34,7 @@ const uiConfig: UserConfigExport = {
     },
   },
   resolve,
-  define: {
-    'process.env': {
-      NODE_ENV: process.env.NODE_ENV ?? '"production"',
-    },
-  },
+  define,
   plugins: [
     react(),
     viteSingleFile({
@@ -57,6 +57,7 @@ const coreConfig: UserConfigExport = {
       transformMixedEsModules: true,
     },
   },
+  define,
   resolve,
 };
 

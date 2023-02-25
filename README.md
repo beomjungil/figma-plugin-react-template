@@ -109,6 +109,10 @@ This directory contains the UI of the plugin.
 
 It uses [react](https://reactjs.org/). with Typescript.
 
+Also it uses [tailwindcss](https://tailwindcss.com/) for styling as default (You can change with what you want).
+
+If you want to add UI components which looks like native Figma UI, see [`react-figma-plugin-ds`](https://www.npmjs.com/package/react-figma-plugin-ds) package.
+
 you can build your custom UI in `src/ui/components` directory.
 
 Check `src/ui/components/App.tsx` for example.
